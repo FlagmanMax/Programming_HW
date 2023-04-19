@@ -7,5 +7,16 @@
 # Пример:
 # ["hello", "2", "world", ":-)"] -> ["2",":-)"]
 
+arrayOfStringsIn = ["hello", "2", "world", ":-)"]
+arrayOfStringsOut = []
+indexOut = 0
+limit = 3
 
-    
+for indexIn in range(len(arrayOfStringsIn)):
+    if (len(arrayOfStringsIn[indexIn]) <= limit):
+        arrayOfStringsOut.append(arrayOfStringsIn[indexIn])
+        # arrayOfStringsOut[indexOut] = arrayOfStringsIn[indexIn]
+        # indexOut += 1
+
+print(arrayOfStringsOut)
+
