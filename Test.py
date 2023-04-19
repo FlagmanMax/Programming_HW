@@ -12,11 +12,15 @@ arrayOfStringsOut = []
 indexOut = 0
 limit = 3
 
-for indexIn in range(len(arrayOfStringsIn)):
-    if (len(arrayOfStringsIn[indexIn]) <= limit):
-        arrayOfStringsOut.append(arrayOfStringsIn[indexIn])
-        # arrayOfStringsOut[indexOut] = arrayOfStringsIn[indexIn]
-        # indexOut += 1
+print(f"Input array:\t{arrayOfStringsIn}")
+   
+def makeArrayOfStringsWithLimitedLength(arrayIn, limit):
+    arrayOut = []
+    for indexIn in range(len(arrayIn)):
+        if (len(arrayIn[indexIn]) <= limit):
+            arrayOut.append(arrayIn[indexIn])
+    
+    return arrayOut
 
-print(arrayOfStringsOut)
-
+arrayOfStringsOut = makeArrayOfStringsWithLimitedLength(arrayOfStringsIn, limit)
+print(f"Output array:\t{arrayOfStringsOut}")
